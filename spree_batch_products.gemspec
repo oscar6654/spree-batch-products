@@ -18,7 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'spree_core', '~> 3.0.0'
   s.add_dependency 'roo', '~> 1.10.3'
-  s.add_dependency 'rubyzip', '0.9.9'
+  s.add_dependency 'rubyzip'
+  s.add_dependency 'zip-zip'
   s.add_dependency 'batch_factory'
 
   s.add_development_dependency 'factory_girl'

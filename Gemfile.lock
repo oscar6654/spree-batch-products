@@ -16,8 +16,9 @@ PATH
     spree_batch_products (3.0.0)
       batch_factory
       roo (~> 1.10.3)
-      rubyzip (= 0.9.9)
+      rubyzip
       spree_core (~> 3.0.0)
+      zip-zip
 
 GEM
   remote: http://rubygems.org/
@@ -335,7 +336,7 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     ruby-ole (1.2.11.8)
-    rubyzip (0.9.9)
+    rubyzip (1.1.7)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -441,6 +442,8 @@ GEM
     warden (1.2.3)
       rack (>= 1.0)
     yui-compressor (0.12.0)
+    zip-zip (0.3)
+      rubyzip (>= 1.0.0)
 
 PLATFORMS
   ruby
