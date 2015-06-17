@@ -76,7 +76,11 @@ class Spree::ProductDatasheet < ActiveRecord::Base
 
         for i in columns_range
           next unless value = row[i] and key = headers[i] # ignore cell if it has no value
-          attr_hash[key] = value
+          if key == 'taxon_ids'
+            attr_hash[key] = value.split(',').map { |e| Spree::Taxon.friendly.find(e).id }
+          else
+            attr_hash[key] = value
+          end
         end
         
         next if attr_hash.empty?

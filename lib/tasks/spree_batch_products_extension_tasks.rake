@@ -40,7 +40,11 @@ namespace :spree_batch_products do
           counter += 1
           
           values = headings.map do |attr|
-            product.send(attr).to_s
+            if attr == "taxon_ids"
+              product.taxons.map { |t| t.permalink }.join(',')
+            else
+              product.send(attr).to_s
+            end
           end
           
           csv << values
