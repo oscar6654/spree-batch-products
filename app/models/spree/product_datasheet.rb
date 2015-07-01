@@ -14,8 +14,10 @@ class Spree::ProductDatasheet < ActiveRecord::Base
   after_find :setup_statistics
   after_initialize :setup_statistics
   
-  has_attached_file :xls, :url => "/uploads/product_datasheets/:id/:filename"
-  
+  has_attached_file :xls,
+                    :url => "/uploads/product_datasheets/:id/:filename",
+                    :path => ':rails_root/public/uploads/product_datasheets/:id/:filename'
+
   validates_attachment_presence :xls
   validates_attachment_content_type :xls, :content_type => ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.oasis.opendocument.spreadsheet', 'text/plain', 'text/csv']
   
