@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'roo', '~> 1.10.3'
   s.add_dependency 'rubyzip'
   s.add_dependency 'zip-zip'
+  s.add_dependency 'iconv'
   s.add_dependency 'batch_factory'
 
   s.add_development_dependency 'factory_girl'
