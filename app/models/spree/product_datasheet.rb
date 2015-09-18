@@ -13,15 +13,10 @@ class Spree::ProductDatasheet < ActiveRecord::Base
 
   after_find :setup_statistics
   after_initialize :setup_statistics
-<<<<<<< HEAD
-  
+
   has_attached_file :xls,
                     :url => "/uploads/product_datasheets/:id/:filename",
                     :path => ':rails_root/public/uploads/product_datasheets/:id/:filename'
-=======
-
-  has_attached_file :xls, :url => "/uploads/product_datasheets/:id/:filename"
->>>>>>> jumph4x/3-0-stable
 
   validates_attachment_presence :xls
   validates_attachment_content_type :xls, :content_type => ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.oasis.opendocument.spreadsheet', 'text/plain', 'text/csv']
@@ -83,16 +78,11 @@ class Spree::ProductDatasheet < ActiveRecord::Base
 
         for i in columns_range
           next unless value = row[i] and key = headers[i] # ignore cell if it has no value
-<<<<<<< HEAD
           if key == 'taxon_ids'
             attr_hash[key] = value.split(',').map { |e| Spree::Taxon.friendly.find(e).id }
           else
             attr_hash[key] = value
           end
-=======
-          value = nil if value == 'nil'
-          attr_hash[key] = value
->>>>>>> jumph4x/3-0-stable
         end
 
         next if attr_hash.empty?
