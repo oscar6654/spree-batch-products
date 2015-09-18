@@ -10,3 +10,5 @@ nbproject
 spec/dummy
 .ruby-*
 .generators
+/.rakeTasks
+/*.iml
