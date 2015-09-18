@@ -125,7 +125,7 @@ describe Spree::ProductDatasheet do
       end
       
       it 'should increment @records_failed when the Product fails to save' do
-        attr_hash = {:slug => ''}
+        attr_hash = {:slug => 'ab'} # too short, should fail validation
         @product_datasheet.update_products(products, attr_hash)
         @product_datasheet.records_failed.should == 1
       end
