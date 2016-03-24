@@ -7,7 +7,6 @@ group :assets do
   gem 'yui-compressor'
 end
 
-gemspec
 gem 'spree', '~> 3.0.0'
 gem 'spree_auth_devise', git: 'git://github.com/spree/spree_auth_devise.git', branch: '3-0-stable'
 
@@ -16,3 +15,5 @@ group :test do
   gem 'database_cleaner'
   gem 'minitest'
 end
+
+gemspec
