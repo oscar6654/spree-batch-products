@@ -7,8 +7,8 @@ group :assets do
   gem 'yui-compressor'
 end
 
-gem 'spree', '~> 3.0.0'
-gem 'spree_auth_devise', git: 'git://github.com/spree/spree_auth_devise.git', branch: '3-0-stable'
+gem 'spree', '~> 3.1.0'
+gem 'spree_auth_devise', git: 'git://github.com/spree/spree_auth_devise.git', branch: '3-1-stable'
 
 group :test do
   gem 'factory_girl', '~> 4.2'
