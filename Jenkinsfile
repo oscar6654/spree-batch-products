@@ -9,6 +9,7 @@ node {
             sh '''#!/bin/bash -l
                 set -e
                 cd .
+                rvm use 2.2.5
                 gem install bundler --no-document
                 bundle install --deployment
             '''
@@ -17,6 +18,7 @@ node {
             sh '''#!/bin/bash -l
                 set -e
                 cd .
+                rvm use 2.2.5
                 bundle exec rake test_app
                 bundle exec rspec
             '''
